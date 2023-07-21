@@ -1,6 +1,6 @@
 package clases.parte2oop
 
-object InheritabceAndTraits extends  App {
+object Inheritance extends  App {
 
   class Animal{
     val creatureType = "wild"
