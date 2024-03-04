@@ -1,6 +1,8 @@
 package clases.parte2oop
 
 import playground.{Cinderella=> Princess, PrinceCharming}
+import java.util.Date
+import java.sql.{Date => SqlDate}
 
 object PackagingAndImports extends App{
 
@@ -16,8 +18,8 @@ object PackagingAndImports extends App{
   val prince = new PrinceCharming
 
   // 1. use FQ names
-  val date = new Date
-  val sqlDate = new SqlDate(2018, 5, 4)
+//  val date = new Date
+//  val sqlDate = new SqlDate(2018, 5, 4)
   // 2. use aliasing
 
   // default imports

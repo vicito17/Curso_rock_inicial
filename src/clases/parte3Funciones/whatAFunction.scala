@@ -1,6 +1,6 @@
 package clases.parte3Funciones
 
-object whatAFunction {
+object whatAFunction extends App{
   //Dream use functions as first class elements
   //probel opp
 
@@ -17,6 +17,15 @@ object whatAFunction {
   val concatStrings: (String, String) => String = new Function2[String, String, String]{
     override def apply(v1: String, v2:String): String = v1 + v2
   }
+
+  val superAdder= new Function1[Int, Function1[Int, Int]] {
+    override def apply(x: Int):Function1[Int, Int] = new Function1[Int, Int]{
+      override def apply(y : Int): Int = y + x
+    }
+  }
+  val adder3 = superAdder(3)
+  println(adder3(4))
+  println(superAdder(3)(4))
 }
 trait MyFunction[A,B]{
   def apply(element: A): B
